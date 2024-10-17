@@ -24,10 +24,13 @@ class ReglaValidacion(ABC):
     
 class ReglaValidacionCalisto:
     
-    pass
+    def contiene_calisto(self, clave: str)->bool:
+        pass
 
 class ReglaValidacionGanimedes:
-    pass
+    def contiene_caracter_especial(self, clave: str)->bool:
+        caracteres_especiales = '@_#$%'
+        return any(caracter in clave for caracter in caracteres_especiales)
 
 class Validador:
     pass
